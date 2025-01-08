@@ -4,11 +4,9 @@ import com.bestbuy.testbase.TestBase;
 import io.restassured.response.ValidatableResponse;
 import net.serenitybdd.annotations.Steps;
 import net.serenitybdd.annotations.Title;
-import net.serenitybdd.junit.runners.SerenityRunner;
 import org.junit.Test;
-import org.junit.runner.RunWith;
 
-@RunWith(SerenityRunner.class)
+//@RunWith(SerenityRunner.class)
 public class ProductCURDTest extends TestBase {
 
     ValidatableResponse response;
