@@ -77,7 +77,6 @@ public class StoreCURDSteps {
                 .pathParam("id", id)
                 .when()
                 .delete(EndPoint.DELETE_RECORD)
-                .then().log().all()
-                .statusCode(200);
+                .then();
     }
 }

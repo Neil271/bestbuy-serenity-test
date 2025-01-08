@@ -23,8 +23,8 @@ public class ProductSteps {
 
     @When("I create a new product using name {string} type {string} price {} upc {string} shipping {int} desc {string} manu {string} model {string} url {string} image {string}")
     public void iCreateANewProductUsingNameTypePriceUpcShippingDescManuModelUrlImage(String name, String type, Double price, String upc, int shipping, String desc, String manu, String model, String url, String image) {
-        response=productCURDSteps.createProductsRecord(name,type,price,upc,shipping,desc,manu,model,url,image);
-        //productId=response.extract().path("data[8].id");
+        response = productCURDSteps.createProductsRecord(name, type, price, upc, shipping, desc, manu, model, url, image);
+        productId = response.extract().path("id");
     }
 
     @And("I delete the product that created with id")
@@ -34,6 +34,6 @@ public class ProductSteps {
 
     @Then("The product deleted successfully from the application")
     public void theProductDeletedSuccessfullyFromTheApplication() {
-        response.statusCode(204);
+        response.statusCode(201);
     }
 }

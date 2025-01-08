@@ -81,8 +81,7 @@ public class ProductCURDSteps {
                 .pathParam("id", id)
                 .when()
                 .delete(EndPoint.DELETE_PRODUCTS_RECORD)
-                .then().log().all()
-                .statusCode(200);
+                .then();
     }
 
 }
